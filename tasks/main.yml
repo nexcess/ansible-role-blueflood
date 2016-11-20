@@ -1,5 +1,11 @@
 ---
 
+- name: Install Java
+  package:
+    state=latest
+    name={{ item }}
+  with_items: "{{ blueflood_java_packages }}"
+
 - name: Ensure User Exists
   useradd:
     user={{ blueflood_user }}
