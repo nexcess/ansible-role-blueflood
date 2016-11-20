@@ -17,6 +17,9 @@
   get_url:
     url=https://github.com/rackerlabs/blueflood/releases/download/rax-release-v{{ blueflood_version }}/blueflood-all-2.0.0-SNAPSHOT-jar-with-dependencies.jar
     dest={{ blueflood_home }}
+    mode=0600
+    owner={{ blueflood_user }}
+    group={{ blueflood_group }}
 
 - name: Make Blueflood Config Dir
   file:
