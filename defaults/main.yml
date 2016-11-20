@@ -6,9 +6,3 @@ blueflood_java_packages:
 blueflood_user: blueflood
 blueflood_group: blueflood
 blueflood_home: /home/bluefood
-blueflood_firewall_open_external_ports:
-  - 22
-  - 19000
-  - 20000
-blueflood_firewall_open_internal_ports:
-  - 9160
