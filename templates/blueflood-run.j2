@@ -9,4 +9,4 @@
         -Dcom.sun.management.jmxremote.ssl=false \
         -Djava.rmi.server.hostname=localhost \
         -Dcom.sun.management.jmxremote.port=9180 \
-        -classpath $TOPDIR/blueflood-all-*-jar-with-dependencies.jar com.rackspacecloud.blueflood.service.BluefloodServiceStarter 2>&1
+        -classpath {{ blueflood_home }}/blueflood-all-*-jar-with-dependencies.jar com.rackspacecloud.blueflood.service.BluefloodServiceStarter 2>&1
