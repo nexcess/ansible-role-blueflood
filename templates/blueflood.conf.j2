@@ -44,7 +44,7 @@ MAX_ZK_LOCKS_TO_ACQUIRE_PER_CYCLE=1
 
 INTERNAL_API_CLUSTER=127.0.0.1:50020,127.0.0.1:50020
 
-GRAPHITE_HOST={{ blueflood_graphite_host }}
+GRAPHITE_HOST={{ blueflood_graphite_host | default('127.0.0.1')}}
 GRAPHITE_PORT={{ blueflood_graphite_port | default(2003) }}
 GRAPHITE_PREFIX=unconfiguredNode.metrics.
 
@@ -55,5 +55,5 @@ QUERY_MODE=true
 # set <= 0 to not retry
 CASSANDRA_MAX_RETRIES=5
 
-ELASTICSEARCH_HOSTS={{ blueflood_elasticsearch_hosts | default('localhost:9300') }}
+ELASTICSEARCH_HOSTS={{ blueflood_elasticsearch_hosts | default('127.0.0.1:9300') }}
 ELASTICSEARCH_CLUSTERNAME={{ blueflood_elasticsearch_clustername | default('elasticsearch') }}
