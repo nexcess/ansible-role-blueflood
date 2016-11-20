@@ -7,10 +7,11 @@
   with_items: "{{ blueflood_java_packages }}"
 
 - name: Ensure User Exists
-  useradd:
+  user:
     user={{ blueflood_user }}
     group={{ blueflood_group }}
     home={{ blueflood_home }}
+    state=present
 
 - name: Get Blueflood
   get_url:
