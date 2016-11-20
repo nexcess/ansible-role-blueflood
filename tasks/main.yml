@@ -6,6 +6,11 @@
     name={{ item }}
   with_items: "{{ blueflood_java_packages }}"
 
+- name: Ensure Group Exists
+  group:
+    group={{ blueflood_group }}
+    state=present
+
 - name: Ensure User Exists
   user:
     user={{ blueflood_user }}
